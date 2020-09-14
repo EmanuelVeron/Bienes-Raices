@@ -1,107 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../css/normalice.css">
-        <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@100&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/styles.css">
-        <title>Blog</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/normalice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@100&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Blog</title>
+</head>
+
 <body>
 
-    <header class="site_header">    
+    <header class="site_header">
         <div class="contenedor contenido_header">
             <div class="barra">
                 <a href="index.html">
-                <img src="../img/logo.svg" alt="logo.svg">
+                    <img src="../img/logo.svg" alt="logo.svg">
                 </a>
-                <nav class="nav">
-                    <a href="nosotros.html">Nosotros</a>   
+                <div class="mobile_menu">
+                    <a href="#nav">
+                        <img src="../img/barras.svg" alt="barra">
+                    </a>
+                </div>
+                <nav id="nav" class="nav">
+                    <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncio</a>
                     <a href="Blog.html">Blog</a>
                     <a href="Contacto.html">Contacto</a>
                 </nav>
-            </div>   
-        </div>
-        </header>  
-            <h1 class="fw-300 centrar-texto">Contacto</h1>
+            </div>
+    </header>
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
 
-            <img src="../img/destacada3.jpg" alt="">
+    <img src="../img/destacada3.jpg" alt="">
 
-            <h2 class="fw-300 centrar-texto">Llena el Formuolario de Contacto</h2>
+    <h2 class="fw-300 centrar-texto">Llena el Formuolario de Contacto</h2>
 
-            <main class="contenedor seccion contenido_centrado" >
-                <form class="contacto" action="">
-                    <fieldset>
-                        <legend>Datos Personales</legend>
-                            <label for="nombre">Nombre:</label>
-                                <input type="text" id="nombre" placeholder="Tu Nombre" required>
-                            
-                            <label for="email">E-mail:</label>
-                                <input type="email" id="email" placeholder="Tu E-mail" required>
-                            
-                            <label for="tel">Teléfono:</label>
-                                <input type="tel" id="tel" placeholder="Tu Teléfono" required>
-                            
-                            <label for="msj">Mensaje:</label>
-                            <textarea id="msj" cols="30" rows="10"></textarea>
-                </fieldset>
+    <main class="contenedor seccion contenido_centrado">
+        <form class="contacto" action="">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu Nombre" required>
 
-                <fieldset>
-                    <legend>Información sobre Propiedad</legend>
-                    <label for="opciones">Vende o Compra:</label>
-                        <select name="" id="opciones">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Tu E-mail" required>
+
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="tel" placeholder="Tu Teléfono" required>
+
+                <label for="msj">Mensaje:</label>
+                <textarea id="msj" cols="30" rows="10"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información sobre Propiedad</legend>
+                <label for="opciones">Vende o Compra:</label>
+                <select name="" id="opciones">
                             <option value="" disabled selected>--Seleccione--</option>
                             <option value="">Comprar</option>
                             <option value="">Vender</option>
                         </select>
-                    
-                    <label>Presupuesto:
+
+                <label>Presupuesto:
                         <input type="number" name="presupuesto" required>
                     </label>
-                </fieldset>
+            </fieldset>
 
-                <fieldset>
-                    <legend>Contacto</legend>
-                    
-                    <p>Como Desea ser Contactado</p>
+            <fieldset>
+                <legend>Contacto</legend>
 
-                    <div class="como_ser_contactado">
-                        <label for="telefono">Teléfono</label>
-                            <input type="radio" id="telefono" name="contacto" required>
-                        
-                        <label for="correo">E-mail </label>
-                            <input type="radio" id="correo" name="contacto" required>
-                   
-                    </div>
-                    <p>Si Eligió Teléfono, elija la Fecha y Hora</p>
+                <p>Como Desea ser Contactado</p>
 
-                    <label for="fecha">Fecha</label>
-                        <input type="date" id="fecha" name="">
-                    
-                    <label for="hora">Hora </label>
-                        <input type="time" id="hora" name="" min="09:00" max="18:00"> 
-                   
-                </fieldset>
+                <div class="como_ser_contactado">
+                    <label for="telefono">Teléfono</label>
+                    <input type="radio" id="telefono" name="contacto" required>
 
-                <input type="submit" value="Enviar" class="boton boton_verde">
-               
-                </form>
-            </main>
-        <footer class="footer seccion">
-            <div class="contenedor contenedor_footer">
-                <nav class="nav">
-                <a href="nosotros.html">Nosotros</a>   
+                    <label for="correo">E-mail </label>
+                    <input type="radio" id="correo" name="contacto" required>
+
+                </div>
+                <p>Si Eligió Teléfono, elija la Fecha y Hora</p>
+
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="">
+
+                <label for="hora">Hora </label>
+                <input type="time" id="hora" name="" min="09:00" max="18:00">
+
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="boton boton_verde">
+
+        </form>
+    </main>
+    <footer class="footer seccion">
+        <div class="contenedor contenedor_footer">
+            <nav class="nav">
+                <a href="nosotros.html">Nosotros</a>
                 <a href="anuncios.html">Anuncio</a>
                 <a href="Blog.html">Blog</a>
                 <a href="Contacto.html">Contacto</a>
-                </nav>
-            
-                <p>Todos los derechos reservados 2020 &copy;</p>
-            </div>
-        </footer>
-     
+            </nav>
+
+            <p>Todos los derechos reservados 2020 &copy;</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

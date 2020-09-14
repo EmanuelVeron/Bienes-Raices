@@ -1,62 +1,77 @@
-/*Globlales*/
-html{
+html {
     box-sizing: border-box;
-    font-size: 62.5%;/*Reset para rems a 10px*/
+    font-size: 62.5%;
+    /*Reset para rems a 10px*/
 }
-*,*:before, *:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
-body{
+
+body {
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 
-h1{
-    font-size: 3.8rem;
-}
 
-h2{
-    font-size: 3.4rem;
-}
+/*Globlales*/
 
-h3{
-    font-size: 3rem;
-}
-
-img{
+img {
     max-width: 100%;
 }
-/**/
 
-/*Utilidades*/
-.seccion{
-    margin: 2 rem 2 rem;
-}
-.fw-300{
-    font-weight: 300;
-}
-.centrar-texto{
-    text-align: center;
-}
-
-.contenedor{
+.contenedor {
+    width: 95%;
     max-width: 120rem;
     margin: 0 auto;
 }
 
-.d_block{
-    display: block!important; 
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+
+/*Utilidades*/
+
+.seccion {
+    margin: 2 rem 2 rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.d_block {
+    display: block!important;
     /*!important hace que no me reescriba el display block con el display inline-block de la clase boton*/
 }
 
-.contenido_centrado{
+.contenido_centrado {
     max-width: 800px;
 }
+
+
 /*______*/
 
+
 /*Botones*/
-.boton{
+
+.boton {
     color: white;
     font-weight: 700;
     text-decoration: none;
@@ -67,31 +82,44 @@ img{
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
 }
 
-.boton:hover{
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
     cursor: pointer;
 }
 
-.boton_amarillo{
+.boton_amarillo {
     background-color: #E08709;
 }
 
-.boton_verde{
+.boton_verde {
     background-color: #71B100;
 }
 
-.ver_todas{
+.ver_todas {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 2rem;
 }
+
+
 /*Header*/
-.site_header{
+
+.site_header {
     background-color: #333333;
     padding: 1rem 0 3rem 0;
 }
-.site_header.inicio{
+
+.site_header.inicio {
     background-image: url(../img/header.jpg);
     background-position: center center;
     background-size: cover;
@@ -99,86 +127,158 @@ img{
     min-height: 60rem;
 }
 
-.contenido_header{
+.contenido_header {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 
-.contenido_header h1{
+@media (min-width: 768px) {
+    .contenido_header {
+        text-align: left;
+    }
+}
+
+.contenido_header h1 {
     color: white;
     padding-bottom: 2rem;
     max-width: 60rem;
 }
-.barra{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3rem;
-}*
 
-.nav a{
+.barra {
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+* .nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    display: block;
 }
-.nav a:hover{
+
+@media (min-width: 768px) {
+    .nav a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    .nav a:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.nav a:hover {
     color: #71B100;
 }
-.nav a:last-of-type{
-    margin-right:0;
+
+
+/*Mobile-Menu*/
+
+.mobile_menu img {
+    width: 5rem;
 }
+
+@media (min-width: 768px) {
+    .mobile_menu img {
+        display: none;
+    }
+}
+
+.nav:target {
+    display: block;
+}
+
+.nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: block;
+    }
+}
+
+
 /*Iconos nosotros*/
-.iconos-nosotros{
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width:768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.icono{
-    flex-basis: calc(33.3% - 1rem);
-    /*text-align: center;*/
+.icono {
+    text-align: center;
 }
 
-.icono h3{
+@media (min-width:768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icono h3 {
     text-transform: uppercase;
+    /*Letra Mayúscula*/
 }
+
 
 /*Anuncios*/
-.contenedor_anuncios{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+@media (min-width: 768px) {
+    .contenedor_anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
-.anuncio{
-    flex: 0 0 calc(33.3% - 1rem);
+.anuncio {
     /*flex-grow: 0;
     flex-shrink: 0;                     
-    flex-basis: calc(33.3% - 1rem);*/ /*<---es lo que flex solo*/
+    flex-basis: calc(33.3% - 1rem);*/
+    /*<---es lo que flex solo*/
     /*border-style: solid;
     border-color: #B5B5B5;
-    border-width: 1px;*/ /*es lo mismo que border solo*/
+    border-width: 1px;*/
+    /*es lo mismo que border solo*/
     border: 1px solid #B5B5B5;
     background-color: #F5F5F5;
     margin-bottom: 2rem;
 }
 
-.contenido_anuncio{
+@media (min-width: 768px) {
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.contenido_anuncio {
     padding: 2rem;
 }
 
-.contenido_anuncio h3, .contenido_anuncio p{
+.contenido_anuncio h3,
+.contenido_anuncio p {
     margin: 0;
 }
 
-.precio{
+.precio {
     color: #71B100;
     font-weight: 700;
 }
 
-.imagen_contacto{
+.imagen_contacto {
     background-image: url(../img/encuentra.jpg);
     background-position: center center;
     background-size: cover;
@@ -187,16 +287,16 @@ img{
     align-items: center;
 }
 
-.contenido_contactos{
-    flex: 1;
+.contenido_contactos {
+    flex: 0 0 95%;
     color: #ffffff;
 }
 
-.contenido_contactos p{
+.contenido_contactos p {
     font-size: 1.8rem;
 }
 
-.iconos_caracteristicas{
+.iconos_caracteristicas {
     list-style: none;
     padding: 0;
     display: flex;
@@ -205,155 +305,195 @@ img{
     max-width: 500px;
 }
 
-.iconos_caracteristicas li{
-  /*flex: 1;*/
-   display: flex;
-   
+.iconos_caracteristicas li {
+    /*flex: 1;*/
+    display: flex;
 }
 
-.iconos_caracteristicas li img{
-    margin-right: 2rem; 
- }
+.iconos_caracteristicas li img {
+    margin-right: 2rem;
+}
+
 
 /*Seccion inferior */
-.seccion_inferior{
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width:768px) {
+    .seccion_inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion_inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion_inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
 }
 
-.seccion_inferior .blog{
-    flex-basis: 60%;
-}
-
-.seccion_inferior .testimoniales{
-    flex-basis: calc(40% - 2rem);
-}
-
-.entrada_blog{
-    display: flex;
-    justify-content: space-between;
+.entrada_blog {
     margin-bottom: 2rem;
 }
 
-.entrada_blog :last-of-type{
+@media (min-width: 768px) {
+    .entrada_blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada_blog :last-of-type {
     margin-bottom: 0;
 }
 
-.entrada_blog .imagen_blog{
-    flex-basis: 40%;
+@media (min-width: 768px) {
+    .entrada_blog .imagen_blog {
+        flex-basis: 40%;
+    }
+    .entrada_blog .texto_blog {
+        flex-basis: calc(60% - 3rem);
+    }
 }
 
-.entrada_blog .texto_blog{
-    flex-basis: calc(60% - 3rem);
-}
-
-.texto_blog a{
+.texto_blog a {
     color: black;
     text-decoration: none;
 }
-.texto_blog h3{
+
+.texto_blog h3 {
     margin: 0;
     line-height: 1.4;
 }
 
-.texto_blog h3::after{
-   content: "";
-   display: block;
-   width: 15rem;
-   height: .5rem;
-   background-color: #71B100;
-   margin-top: 1rem;
+.texto_blog h3::after {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
 }
 
-.texto_blog span{
+.texto_blog span {
     color: #E08709;
 }
 
+
 /*Testimoniales*/
-.testimonial{
+
+.testimonial {
     background-color: #71B100;
     color: white;
     font-size: 2.4rem;
     padding: 2rem;
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
+    margin-bottom: 2rem;
 }
 
-.testimonial p{
+.testimonial p {
     /*text-aling: right;*/
     display: flex;
     flex-direction: row-reverse;
-
 }
 
-.testimonial blockquote::before{
+.testimonial blockquote::before {
     content: "";
     background-image: url(../img/comilla.svg);
     width: 4rem;
     height: 4rem;
     color: white;
     position: absolute;
-    right: 33rem;
+    left: -2rem;
 }
 
-.testimonial blockquote{
+.testimonial blockquote {
     position: relative;
     padding-left: 3.5rem;
     font-weight: 300;
 }
 
+
 /*Footer*/
-.footer{
+
+.footer {
     background-color: #333333;
     margin: 0;
 }
 
-.contenedor_footer{
+.contenedor_footer {
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
-}   
+    text-align: center;
+}
 
-.footer p{
+@media (min-width: 768px) {
+    .contenedor_footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .footer nav {
+        display: block;
+    }
+}
+
+.footer p {
     color: white;
     margin: 0;
 }
 
+
 /*Paginas internas*/
+
+
 /*Nosotros*/
-.contenido_nosotros{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem; /*pone epacio entre las 2 columnas*/
+
+@media (min-width: 768px) {
+    .contenido_nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 2rem;
+        /*pone epacio entre las 2 columnas*/
+    }
 }
 
-.texto_nosotros blockquote{
+.texto_nosotros blockquote {
     font-weight: 900;
     font-size: 2rem;
     margin: 0;
     padding: 3rem 0;
 }
 
+
 /*Anuncio*/
-.resumen_propiedad{
+
+.resumen_propiedad {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
 /*Contacto*/
-.contacto p{
+
+.contacto p {
     font-size: 1.5rem;
     color: #4f4f4f;
     margin: 2rem 0 0 0;
 }
-label{
+
+label {
     font-weight: 600;
     display: block;
     text-transform: uppercase;
 }
 
-legend{
+legend {
     font-size: 2rem;
     font-weight: 700;
     color: #333333;
@@ -366,7 +506,7 @@ textarea,
 select,
 input[type="number"],
 input[type="date"],
-input[type="time"]{
+input[type="time"] {
     padding: 1rem;
     display: block;
     width: 100%;
@@ -376,19 +516,14 @@ input[type="time"]{
     border-radius: 1rem;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     width: auto;
     margin: 0;
 }
 
-.como_ser_contactado{
+.como_ser_contactado {
     display: flex;
     justify-content: space-between;
     max-width: 30rem;
     align-items: center;
 }
-
-
-
-
-
